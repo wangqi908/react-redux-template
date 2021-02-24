@@ -5,7 +5,7 @@ import {
   incrementAction,
   decrementAction,
   incrementActionAsync
-} from '../../redux/actionCreators'
+} from '../../redux/actions/count'
 
 class Count extends Component {
   static propTypes = {
@@ -42,7 +42,7 @@ class Count extends Component {
 
 export default connect(
   (state) => ({
-    num: state.num
+    num: state.count.num
   }),
   {
     incrementAction,

@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from './actionTypes'
+import { INCREMENT, DECREMENT } from '../actionTypes'
 
 export const incrementAction = (data) => ({ type: INCREMENT, data })
 export const decrementAction = (data) => ({ type: DECREMENT, data })

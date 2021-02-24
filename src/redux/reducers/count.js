@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from './actionTypes'
+import { INCREMENT, DECREMENT } from '../actionTypes'
 
 const initData = {
   num: 0
