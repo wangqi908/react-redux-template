@@ -1,7 +1,12 @@
 import React from 'react'
+import Count from './components/Count'
 
 function App () {
-  return <div className='App'>template-react</div>
+  return (
+    <div>
+      <Count />
+    </div>
+  )
 }
 
 export default App
