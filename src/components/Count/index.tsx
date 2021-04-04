@@ -7,10 +7,12 @@ import {
 } from '../../redux/modules/count/actions'
 import { AppState } from '../../redux'
 import { IListData, IIncrementData } from '../../redux/modules/count/types'
+import { IItemData as ITodoItem } from '../../redux/modules/todo/types'
 
 interface IProps {
   num: number
   list: IListData[]
+  todoList: ITodoItem[]
   incrementAction: typeof incrementAction
   addListAction: typeof addListAction
   incrementActionAsync: (data: IIncrementData, time?: number) => void
@@ -31,13 +33,14 @@ class Count extends Component<IProps, {}> {
     this.props.incrementActionAsync({ num: 2 }, 500)
   }
   render () {
-    const { num, list } = this.props
+    const { num, list, todoList } = this.props
     return (
       <div>
         <button onClick={this.addNum}>+2</button>
         <button onClick={this.addList}>addList</button>
         <button onClick={this.addNumAsync}>+2Async</button>
         <p>{num}</p>
+        <p>todo长度{todoList.length}</p>
         {list.map((item, index) => (
           <p key={item.id + index}>{item.name}</p>
         ))}
@@ -48,7 +51,8 @@ class Count extends Component<IProps, {}> {
 
 const mapStateToProps = (state: AppState) => ({
   num: state.count.num,
-  list: state.count.list
+  list: state.count.list,
+  todoList: state.todo.list
 })
 
 const mapDispatchToProps = {
