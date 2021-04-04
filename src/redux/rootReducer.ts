@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import count from './modules/count/reducer'
-import todo from './modules/todo/reducer'
+import count from '@rm/count/reducer'
+import todo from '@rm/todo/reducer'
 
 export default combineReducers({ count,todo })

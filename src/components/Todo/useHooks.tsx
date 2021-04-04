@@ -1,12 +1,12 @@
 import { useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { AppState } from '../../redux/index'
+import { AppState } from '@/redux/index'
 import {
   addItemAction,
   delItemAction,
   delItemActionAsync
-} from '../../redux/modules/todo/actions'
-import { IItemData } from '../../redux/modules/todo/types'
+} from '@rm/todo/actions'
+import { IItemData } from '@rm/todo/types'
 
 export default function useHooks () {
   const dispatch = useDispatch()

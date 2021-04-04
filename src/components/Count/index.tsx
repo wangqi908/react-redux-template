@@ -4,10 +4,10 @@ import {
   incrementAction,
   addListAction,
   incrementActionAsync
-} from '../../redux/modules/count/actions'
-import { AppState } from '../../redux'
-import { IListData, IIncrementData } from '../../redux/modules/count/types'
-import { IItemData as ITodoItem } from '../../redux/modules/todo/types'
+} from '@rm/count/actions'
+import { AppState } from '@/redux'
+import { IListData, IIncrementData } from '@rm/count/types'
+import { IItemData as ITodoItem } from '@rm/todo/types'
 
 interface IProps {
   num: number
